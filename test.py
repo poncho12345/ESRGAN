@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import os.path as osp
+=======
+import os.path
+>>>>>>> parent of 164beed (add command argv)
 import glob
 import cv2
 import numpy as np
@@ -6,12 +10,22 @@ import torch
 import RRDBNet_arch as arch
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 model_path = 'models/RRDB_ESRGAN_x4.pth'  # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
 device = torch.device('cuda')  # if you want to run on CPU, change 'cuda' -> cpu
 # device = torch.device('cpu')
 =======
 model_path = sys.argv[1]  # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
 >>>>>>> parent of 6f106de (add run on CPU)
+=======
+mode = 'ESRGAN'  # ESRGAN or RRDB_PSNR
+
+
+if mode == 'ESRGAN':
+    model_path = './models/RRDB_ESRGAN_x4.pth'
+elif mode == 'RRDB_PSNR':
+    model_path = './models/RRDB_PSNR_DF2K_x4.pth'
+>>>>>>> parent of 164beed (add command argv)
 
 test_img_folder = 'LR/*'
 
